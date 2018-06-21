@@ -1,0 +1,60 @@
+{% extends "layout-fluid.html" %}
+
+{% block page_title %}
+  Layouts and grids – Styles | DVLA internal frontend toolkit
+{% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="breadcrumbs">
+        <ol>
+            <li><a href="/styles">Styles</a></li>
+            <li>Layout</li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h1>Layout</h1>
+            <ol class="list-numbered">
+                <li><a href="#fixed-container">Fixed container</a></li>
+                <li><a href="#fluid-container">Fluid container</a></li>
+            </ol>
+            <h2>Fixed container <a href="#fixed-container" id="fixed-container"></a></h2>
+            <div class="example-demo">
+                {% include "./includes/fixed-container.html" %}
+            </div>
+            <pre class="line-numbers language-markup"><code><xmp>{% include "./includes/fixed-container.html" %}</xmp></code></pre>
+            <h2>Fluid container <a href="#fluid-container" id="fluid-container"></a></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="example-demo">
+                {% include "./includes/fluid-container.html" %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <pre class="line-numbers language-markup"><code><xmp>{% include './includes/fluid-container.html' %}</xmp></code></pre>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% import "includes/macros/top-nav.html" as top_nav %}
+{% block tabs_top %}
+{{ top_nav.set('Styles') }}
+{% endblock %}
+
+{% import "includes/macros/left-nav.html" as left_nav %}
+{% block tabs_left %}
+{{ left_nav.set('Styles', 'Layout') }}
+{% endblock %}
+
+{% block header_application_title %}
+<a href="/">frontend toolkit</a>
+{% endblock %}

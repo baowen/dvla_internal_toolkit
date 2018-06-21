@@ -1,0 +1,121 @@
+{% extends "layout-fluid.html" %}
+
+{% block page_title %}
+Typography – Styles | DVLA internal frontend toolkit
+{% endblock %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <ol>
+        <li><a href="/styles">Styles</a></li>
+        <li>Typography</li>
+    </ol>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h1>Typography</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <ol class="list-numbered">
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#paragraphs">Paragraphs</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#inset">Insets</a></li>
+            <li><a href="#disclosure">Disclosure</a></li>
+            <li><a href="#important">Important</a></li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Headings <a href="#headings" id="headings"></a></h2>
+        <div class="example-demo">
+            {% include './includes/headings.html' %}
+        </div>
+        <pre class="line-numbers language-markup"><code><xmp>{% include './includes/headings.html' %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Paragraphs <a href="#paragraphs" id="paragraphs"></a></h2>
+        <div class="example-demo">
+            {% include './includes/paragraphs.html' %}
+        </div>
+        <pre class="line-numbers language-markup"><code><xmp>{% include './includes/paragraphs.html' %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Links <a href="#links" id="links"></a></h2>
+        <div class="example-demo">
+            {% include './includes/links.html' %}
+        </div>
+        <pre class="line-numbers language-markup"><code><xmp>{% include './includes/links.html' %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Lists <a href="#lists" id="lists"></a></h2>
+        <div class="example-demo">
+            {% include "./includes/lists.html" %}
+        </div>
+        <pre class="line-numbers language-markup"><code><xmp>{% include "./includes/lists.html"  %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Insets <a href="#inset" id="inset"></a></h2>
+        <div class="example-demo">
+            {% include "./includes/inset.html" %}
+        </div>
+        <pre class="line-numbers language-markup"><code><xmp>{% include "./includes/inset.html"  %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Disclosure <a href="#disclosure" id="disclosure"></a></h2>
+        <div class="example-demo">
+            {% include "./includes/disclosure.html" %}
+        </div>
+        <pre class="line-numbers language-markup"><code><xmp>{% include "./includes/disclosure.html"  %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Important <a href="#important" id="important"></a></h2>
+        <div class="example-demo">
+            {% include "./includes/important.html" %}
+        </div>
+        <pre class="line-numbers language-markup"><code><xmp>{% include "./includes/important.html"  %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Examples</h2>
+        <ul>
+            <li><a href="/styles/typography/sheet">Typography sheet</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% import "includes/macros/top-nav.html" as top_nav %}
+{% block tabs_top %}
+{{ top_nav.set('Styles') }}
+{% endblock %}
+
+{% import "includes/macros/left-nav.html" as left_nav %}
+{% block tabs_left %}
+{{ left_nav.set('Styles', 'Typography') }}
+{% endblock %}
+
+{% block header_application_title %}
+<a href="/">frontend toolkit</a>
+{% endblock %}

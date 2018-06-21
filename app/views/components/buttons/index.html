@@ -1,0 +1,115 @@
+{% extends "layout-fluid.html" %}
+
+{% block page_title %}
+Buttons  – Components | DVLA internal frontend toolkit
+{% endblock %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <ol>
+        <li><a href="/components">Components</a></li>
+        <li>Buttons</li>
+    </ol>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h1>Buttons</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <ol class="list-numbered">
+            <li><a href="#text">Button text</a></li>
+            <li><a href="#styles">Styles</a></li>
+            <li><a href="#sizes">Sizes</a></li>
+            <li><a href="#sizes">Disabled</a></li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Button text <a href="#text" id="text"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="example-demo">
+            {% include './includes/text.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <pre id="text" class="line-numbers language-markup"><code><xmp>{% include './includes/text.html' %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Styles <a href="#styles" id="styles"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="example-demo">
+            {% include './includes/styles.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <pre id="styles" class="line-numbers language-markup"><code><xmp>{% include './includes/styles.html' %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Sizes <a href="#sizes" id="sizes"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="example-demo">
+            {% include './includes/sizes.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <pre id="sizes" class="line-numbers language-markup"><code><xmp>{% include './includes/sizes.html' %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Disabled <a href="#disabled" id="disabled"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="example-demo">
+            {% include './includes/disabled.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <pre id="disabled" class="line-numbers language-markup"><code><xmp>{% include './includes/disabled.html' %}</xmp></code></pre>
+    </div>
+</div>
+{% endblock %}
+
+{% import "includes/macros/top-nav.html" as top_nav %}
+{% block tabs_top %}
+{{ top_nav.set('Components') }}
+{% endblock %}
+
+{% import "includes/macros/left-nav.html" as left_nav %}
+{% block tabs_left %}
+{{ left_nav.set('Components', 'Buttons') }}
+{% endblock %}
+
+{% block header_application_title %}
+<a href="/">frontend toolkit</a>
+{% endblock %}

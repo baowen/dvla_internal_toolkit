@@ -1,0 +1,77 @@
+@mixin list() {
+    width: 100%;
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding-left: 0;
+
+    .list-title-row {
+        border-bottom: 2px solid $grey-2;
+        box-sizing: border-box;
+        display: flex;
+
+        .list-title {
+            font-weight: bold;
+            font-size: 20px;
+            flex: 1 1 50%;
+        }
+
+        .list-change {
+            flex: 1 1 50%;
+            text-align: right;
+            font-weight: bold;
+            color: $primary;
+
+            a {
+                &:visited {
+                    color: $primary;
+                }
+                &:hover {
+                    color: $primary-darker;
+                }
+            }
+        }
+    }
+    .list-row {
+        border-bottom: 1px solid $grey-2;
+        font-size: 16px;
+        display: flex;
+
+        .list-property {
+            min-height: 16px;
+            flex: 1 1 50%;
+        }
+        
+        .list-data {
+            font-weight: bold;
+            min-height: 16px;
+            flex: 1 1 50%;
+        }
+    }
+
+}
+
+.list {
+    @include list();
+
+    .list-title-row {
+        height: 40px;
+    }
+
+    .list-row {
+        padding: 16px;
+    }
+}
+
+.list-sml {
+    @include list();
+
+    .list-title-row {
+        height: 36px;
+    }
+    
+    .list-row {
+        padding: 6px;
+        padding-left: 12px;
+    }
+}

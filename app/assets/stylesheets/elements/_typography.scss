@@ -1,0 +1,214 @@
+body {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin anchor() {
+    a {
+        color: $black;
+        position: relative;
+        text-decoration: none;
+        opacity: 0;
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            height: 120px;
+            top: -120px;
+            visibility: none;
+        }
+
+        &::after {
+            font-family: $icon-font;
+            font-size: 0.6em;
+            vertical-align: middle;
+            content: '\e90e';
+        }
+
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover, &:focus {
+            outline: none;
+            background: none;
+            opacity: 0.75;
+        }
+
+        &:active {
+            opacity: 1;
+        }
+    }
+
+    &:hover, &:focus  {
+        a {
+            opacity: 0.75;
+        }            
+    }
+}
+
+@mixin heading() {
+    font-weight: 500;
+    color: $primary;
+    margin-top: 1.25em;
+    margin-bottom: 0.25em;
+
+    @include anchor();
+}
+
+h1, .heading-extra-large {
+    @include heading();
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.3px;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+h2, .heading-large {
+    @include heading();
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.2px;
+}
+
+h3, .heading-medium {
+    @include heading();
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+}
+
+h4, .heading-small {
+    @include heading();
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+h5, .heading-extra-small {
+    @include heading();
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.text-large {
+    color: $text-primary-colour;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.text-small {
+    color: $text-primary-colour;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.lede {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.3px;
+    font-weight: normal;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p {
+    margin-top: 0;
+}
+
+ul, ol {
+    &.list-bulleted {
+        list-style-type: disc;
+    }
+
+    &.list-numbered {
+        list-style-type: decimal; 
+    }
+
+    &.list-bulleted, &.list-numbered {
+        color: $text-primary-colour;
+        line-height: 28px;
+
+        &.text-large {
+            line-height: 32px;
+            font-size: 20px;
+        }
+    }
+}
+
+.inset {
+    border-left: 6px solid $grey-3;
+    padding-left: 16px;
+    display: block;
+}
+
+details {
+
+    summary {
+        color: $link-colour;
+        margin-bottom: 16px;
+        
+        &:focus {
+            outline: 3px solid $focus-colour;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.important {
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    &:before {
+        padding-top: 4px;
+        padding-left: 9px;
+        font-family: $icon-font;
+        content: '\e90c';
+        left: 0;
+        top: 0;
+        background: black;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        display: inline-block;
+    }
+
+    p, div, span {
+        margin-top: -32px;
+        padding-left: 48px;
+        line-height: 32px;
+    }
+}
+
+a {
+    color: $link-colour;
+
+    &:visited {
+        color: $visited-colour;
+    }
+    &:hover {
+        color: $link-hover-colour;
+    }
+    &:focus {
+        outline: 3px solid $focus-colour;
+        background: $focus-colour;
+    }
+}

@@ -1,0 +1,64 @@
+{% extends "layout-fluid.html" %}
+
+{% block page_title %}
+Data visualisation – Components | DVLA internal frontend toolkit
+{% endblock %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <ol>
+        <li><a href="/components">Components</a></li>
+        <li>Data visualisation</li>
+    </ol>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h1>Data visualisation</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <ol class="numbered-list">
+            <li><a href="#highlight">Highlight</a>
+                <ul>
+                    <li><a href="#highlight-dark">Dark</a></li>
+                    <li><a href="#highlight-light">Light</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Highlight <a href="#highlight" id="highlight"></a></h2>
+        <h3>Dark <a href="#highlight-dark" id="highlight-dark"></a></h3>
+        <div class="example-demo">{% include './includes/highlight-dark.html' %}</div>
+        <pre><code class="line-numbers language-markup"><xmp>{% include './includes/highlight-dark.html' %}</xmp></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h3>Light <a href="#highlight-light" id="highlight-light"></a></h3>
+        <div class="example-demo">{% include './includes/highlight-light.html' %}</div>
+        <pre><code class="line-numbers language-markup"><xmp>{% include './includes/highlight-light.html' %}</xmp></code></pre>
+    </div>
+</div>
+{% endblock %}
+
+{% import "includes/macros/top-nav.html" as top_nav %}
+{% block tabs_top %}
+{{ top_nav.set('Components') }}
+{% endblock %}
+
+{% import "includes/macros/left-nav.html" as left_nav %}
+{% block tabs_left %}
+{{ left_nav.set('Components', 'Data visualisation') }}
+{% endblock %}
+
+{% block header_application_title %}
+<a href="/">frontend toolkit</a>
+{% endblock %}

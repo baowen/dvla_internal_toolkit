@@ -1,0 +1,156 @@
+.breadcrumbs {
+  font-size: 16px;
+
+  ol {
+    list-style-type: none;
+    padding: 24px 8px 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+
+      &:first-child {
+        background-image: none;
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      @include imageAsset('separator.png');
+      background-position: 0% 50%;
+      background-repeat: no-repeat;
+      margin-left: 1em;
+      padding-left: 1.5em;
+    }
+  }
+
+  a {
+    color: $black;
+    text-decoration: underline;
+
+    &:visited {
+      color: $black;
+    }
+
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+#global-header {
+
+  ul {
+    display: block;
+    width: 100%;
+    background-color: $grey-4;
+    line-height: 50px;
+    margin: 0 auto;
+    border-bottom: 1px solid $grey-2;
+    box-sizing: border-box;
+    
+    li {
+        display: inline-block;
+        // padding: 0 32px;
+        list-style: none;
+        font-weight: bold;
+        height: 50px;
+
+        &:hover {
+          border-bottom: 2px solid $primary-lighter;
+        }
+
+        a {
+          padding: 0 32px;
+          text-decoration: none;
+          color: $black;
+          display: block;
+          height: 100%;
+
+          &:hover{
+              cursor: pointer;
+              color: $primary;
+              // text-decoration: underline;
+          }
+        }
+
+        &:active, &.active{
+            color: $primary;
+            border-bottom: 2px solid $primary;
+
+            a {
+                color: $primary;
+            }
+        }
+    }
+  }
+}
+
+.side-bar{
+  position: fixed;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: $grey-4; 
+  border-right: 1px solid $grey-2; 
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding-bottom: 120px;
+  // margin-top: -8px;
+
+  ul {
+    margin-top: 0;
+    padding: 0;
+    padding-top: 40px;
+
+    li {
+      list-style: none;
+      // padding-left: 40px;
+      line-height: 40px;
+      font-weight: bold;
+      height: 40px;
+
+      a {
+        padding-left: 40px;
+        text-decoration: none;
+        color: $black;
+        display: block;
+        height: 100%;
+
+        &:visited{
+          text-decoration: none;
+          color: $black;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $primary-lightest;
+        color: $primary;
+
+        a {
+          color: $primary;
+        }
+      }
+
+      &:active, &.active {
+        color: $primary;
+        border-left: 8px solid $primary;
+        background-color: $primary-lightest;
+
+        a {
+          color: $primary;
+          padding-left: 32px;
+        }
+      }
+    }
+  }
+
+  & + .container-fluid {
+    padding-left: 304px;
+
+    @media screen and (max-width: 1023px) {
+      padding-left: 280px;
+    }
+  }
+}

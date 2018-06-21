@@ -1,0 +1,60 @@
+@mixin alert-icon() {
+    font-size: 22px;
+    font-family: $icon-font;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
+.alert {
+    width: 100%;
+    text-align: center;
+    border-top-width: 4px;
+    border-top-style: solid;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: $black;
+    padding: 40px 32px 44px 32px;
+
+    &.success {
+        border-top-color: $success;
+        background: $success-lightest;
+
+        &:before {
+            @include alert-icon();
+            font-size: 18px;
+            content: '\e90a';
+            color: white;
+            background: $success;
+        }
+    }
+
+    &.info {
+        border-top-color: $secondary;
+        background: $secondary-lightest;
+
+        &:before {
+            @include alert-icon();
+            content: '\e903';
+            color: white;
+            background: $secondary;
+        }
+    }
+
+    &.warning {
+        border-top-color: $warning;
+        background: $warning-lightest;
+
+        &:before {
+            @include alert-icon();
+            content: '\e90c';
+            color: white;
+            background: $warning;
+            padding-left: 2px;
+        }
+    }
+}

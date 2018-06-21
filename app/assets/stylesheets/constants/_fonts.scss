@@ -1,0 +1,127 @@
+/* Interface version 2.0 – 09/09/2017 @ https://github.com/rsms/inter */
+
+@font-face {
+    font-family: 'Interface';
+    @include fontAsset('Inter-UI-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Interface';
+    @include fontAsset('Inter-UI-Medium.woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Interface';
+    @include fontAsset('Inter-UI-Bold.woff');
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: 'dvla-icons';
+    @include fontAsset('dvla-icons.woff');
+}
+
+$primary-font: 'Interface', 'Helvetica Neue', Arial, sans-serif;
+$icon-font: 'dvla-icons';
+
+$normal-font-size: 16px;
+$large-font-size: 20px;
+
+.icon {
+    font-family: $icon-font;
+
+    &.icon-add::before {
+        content: '\e900';
+    }
+
+    &.icon-calendar::before {
+        content: '\e901';
+    }
+
+    &.icon-download::before {
+        content: '\e902';
+    }
+
+    &.icon-info::before {
+        content: '\e903';
+    }
+
+    &.icon-key::before {
+        content: '\e904';
+    }
+
+    &.icon-manufacturer::before {
+        content: '\e905';
+    }
+
+    &.icon-refresh::before {
+        content: '\e906';
+    }
+
+    &.icon-retroreg::before {
+        content: '\e907';
+    }
+
+    &.icon-search::before {
+        content: '\e908';
+    }
+
+    &.icon-tag::before {
+        content: '\e909';
+    }
+
+    &.icon-tick::before {
+        content: '\e90a';
+    }
+
+    &.icon-user::before {
+        content: '\e90b';
+    }
+
+    &.icon-warning::before {
+        content: '\e90c';
+    }
+
+    &.icon-cross::before {
+        content: '\e90d';
+    }
+
+    &.icon-link::before {
+        content: '\e90e';
+    }
+
+    &.icon-caret-up::before {
+        content: '\e90f';
+    }
+    
+    &.icon-caret-right::before {
+        content: '\e910';
+    }
+    
+    &.icon-caret-down::before {
+        content: '\e911';
+    }
+    
+    &.icon-caret-left::before {
+        content: '\e912';
+    }
+    
+    &.icon-chevron-up::before {
+        content: '\e913';
+    }
+    
+    &.icon-chevron-right::before {
+        content: '\e914';
+    }
+    
+    &.icon-chevron-down::before {
+        content: '\e915';
+    }
+    
+    &.icon-chevron-left::before {
+        content: '\e916';
+    }
+}

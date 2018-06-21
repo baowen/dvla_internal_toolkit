@@ -1,0 +1,78 @@
+{% extends "layout-fluid.html" %} {% block page_title %} Prototype kit {% endblock %} {% block
+tabs_left %}
+<ul>
+    <li>
+        <a href="/prototype/">1. Getting started</a>
+    </li>
+    <li>
+        <a href="/prototype/layouts-ruby">2. Layouts</a>
+    </li>
+    <li class="active">
+        <a href="/prototype/grids-ruby/">3. Grids</a>
+    </li>
+</ul>
+{% endblock %}
+{% block head %}
+    {% include "includes/head.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="breadcrumbs">
+    <ol>
+        <li>
+            <a href="/prototype">Prototype</a>
+        </li>
+        <li>Grids</li>
+    </ol>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Grids</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h3>What is the grid?</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p>The grid is used to dictate the position of elements on the web page. You can think of the grid as a row of blocks
+            that make up the web page. Each row within the grid adds up to 12. Below is an example of the grid in action.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="example-demo">
+            {% include '../includes/layouts/fixed-container.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p>The code that is used to generate the above example is as follows</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <pre class="line-numbers language-markup"><code><xmp>{% include "../includes/layouts/fixed-container.html" %}</xmp></code></pre>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block tabs_top %}
+<ul>
+    <li><a href="/">About</a></li>
+    <li><a href="/styles">Styles</a></li>
+    <li><a href="/components">Components</a></li>
+    <li><a href="/patterns">Patterns</a></li>
+    <li class="active"><a href="/prototype">Prototype</a></li>
+</ul>
+{% endblock %}
+
+{% block header_application_title %}
+<a href="/">frontend toolkit</a>
+{% endblock %}

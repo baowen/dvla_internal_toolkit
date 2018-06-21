@@ -1,0 +1,147 @@
+{% extends "layout-fluid.html" %}
+
+{% block page_title %}
+Colour – Styles | DVLA internal frontend toolkit
+{% endblock %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <ol>
+        <li><a href="/styles">Styles</a></li>
+        <li>Colour</li>
+    </ol>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h1 id="primary">Colour</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <ol class="list-numbered">
+            <li><a href="#primary">Primary</a></li>
+            <li><a href="#secondary">Secondary</a></li>
+            <li><a href="#success">Success</a></li>
+            <li><a href="#error">Error</a></li>
+            <li><a href="#warning">Warning</a></li>
+            <li><a href="#interface">Interface</a></li>
+            <li><a href="#status">Status</a></li>
+            <li><a href="#accents">Accents</a></li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Primary colours <a href="#primary" id="primary"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="primary" class="example-demo">
+            {% include './includes/primary.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Secondary colours <a href="#secondary" id="secondary"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="secondary" class="example-demo">
+            {% include './includes/secondary.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Success colours <a href="#success" id="success"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="success" class="example-demo">
+            {% include './includes/success.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Warning colours <a href="#warning" id="warning"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="warning" class="example-demo">
+            {% include './includes/warning.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Error colours <a href="#error" id="error"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="error" class="example-demo">
+            {% include './includes/error.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Interface colours <a href="#interface" id="interface"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="interface" class="example-demo">
+            {% include './includes/interface.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Status colours <a href="#status" id="status"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="status" class="example-demo">
+            {% include './includes/status.html' %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Accents colours <a href="#accents" id="accents"></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="accents" class="example-demo">
+            {% include './includes/accents.html' %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% import "includes/macros/top-nav.html" as top_nav %}
+{% block tabs_top %}
+{{ top_nav.set('Styles') }}
+{% endblock %}
+
+{% import "includes/macros/left-nav.html" as left_nav %}
+{% block tabs_left %}
+{{ left_nav.set('Styles', 'Colour') }}
+{% endblock %}
+
+{% block header_application_title %}
+<a href="/">frontend toolkit</a>
+{% endblock %}

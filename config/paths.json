@@ -1,0 +1,15 @@
+{
+  "assetsImg": "app/assets/images/",
+  "assetsFnt": "app/assets/fonts/",
+  "assetsJs": "app/assets/javascripts/",
+  "assetsScss": "app/assets/stylesheets/",
+  "config": "config/",
+  "nodeModules": "node_modules/",
+  "public": "public/",
+  "publicImg": "public/images/",
+  "publicFnt": "public/fonts/",
+  "publicCss": "public/stylesheets/",
+  "publicJs": "public/javascripts/",
+  "testSpecs": "test/specs/",
+  "views": "views/"
+}

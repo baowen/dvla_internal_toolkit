@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{DVLA Internal Frontend Toolkit}
   spec.description   = %q{DVLA Internal Frontend Toolkit}
-  spec.homepage      = "...."
+  spec.homepage      = "https://github.com/dvla/dvla_internal_frontend_toolkit"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
